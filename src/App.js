@@ -14,7 +14,7 @@ import {
   Link
 } from "react-router-dom";
 
-export default function BasicExample() {
+export default function App() {
   return (
     <Router>
       <div>
@@ -30,15 +30,6 @@ export default function BasicExample() {
           </li>
         </ul>
 
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
         <Routes>
           <Route exact path="/" element={<Home />}>
             
@@ -61,7 +52,7 @@ export default function BasicExample() {
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
+      {/* <h2>Home</h2> */}
       <CodeOutput/>
     </div>
   );
@@ -186,7 +177,7 @@ export function CodeOutput() {
       <div style={{float:'left', width: '45%', boxSizing:'border-box', marginTop:'5px'}}>
         <CodeMirror
           value={code}
-          height="200px"
+          height="350px"
           // width="300px"
           theme="dark"
           // extensions={[javascript({ jsx: true }), html]}
