@@ -179,7 +179,7 @@ export function CodeOutput() {
       <div style={{float:'left', width: '45%', boxSizing:'border-box', marginTop:'5px'}}>
         <CodeMirror
           value={code}
-          height="350px"
+          height="400px"
           // width="300px"
           theme="dark"
           // extensions={[javascript({ jsx: true }), html]}
@@ -192,7 +192,8 @@ export function CodeOutput() {
       <div id="output"  
         style={{ float:'left', 
           marginLeft: '50px', 
-          width:'45%', 
+          width:'45%',
+          height: '400px', 
           boxSizing:'border-box'}}
         >
         {/* <iframe>
