@@ -2,6 +2,7 @@ import React , {useState} from "react";
 import {styles} from './App.css';
 import Parser from 'html-react-parser';
 import CodeMirror from "@uiw/react-codemirror";
+import Frame from 'react-frame-component';
 // import { javascript } from "@codemirror/lang-javascript";
 import { html } from "@codemirror/lang-html";
 // import {examples} from './data.js';
@@ -158,7 +159,7 @@ export function CodeOutput() {
     console.log("inside select onchange e:", e);
     var filename = e.target.value;
     var example = examples.find(ex => ex.filename == filename);
-    console.log('example:', example);
+    // console.log('example:', example);
     var exampleHtml = example.html;
     setCode(exampleHtml);
   }
@@ -187,13 +188,21 @@ export function CodeOutput() {
         />
       </div>
 
+
       <div id="output"  
         style={{ float:'left', 
           marginLeft: '50px', 
           width:'45%', 
           boxSizing:'border-box'}}
         >
-        {Parser(code)}
+        {/* <iframe>
+        {/* {Parser(code)} */}
+        {/* <h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+        </iframe> */} 
+         <Frame >
+         {Parser(code)}
+         </Frame>
       </div>
     </div>
   );
