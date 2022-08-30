@@ -4,7 +4,8 @@ import Parser from 'html-react-parser';
 import CodeMirror from "@uiw/react-codemirror";
 // import { javascript } from "@codemirror/lang-javascript";
 import { html } from "@codemirror/lang-html";
-import {examples} from './data.js';
+// import {examples} from './data.js';
+import {examples} from './big_data.js';
 
 import {
   BrowserRouter as Router,
